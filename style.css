@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Montserrat&display=swap');
+html{margin: 0; padding: 0;}
+h1{font-size: 0; margin: 0; }
+ul{list-style: none; margin: 0 auto; padding: 0;}
+a{text-decoration: none; cursor: pointer; margin: 0 auto; padding: 0; color:#5C6A79;}
+.container{width: 1440px; margin: 0; padding: 0; color: #5C6A79; font-weight: 700;}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+a:active{
+    text-decoration:none;
+    color:#1C2A39;
+    font-weight: 900;
+}
+a:hover{
+    text-decoration:none;
+    color:#1C2A39;
+}
+header{
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 47px 160px 40px 166px;
+}
+.breadcrumbs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+h1{
+    font-size: 24px;
+    color: #1C2A39; 
+}
+.tabs-nav{
+    display: flex;
+    text-transform: uppercase;
+    color: #5C6A79;
+    justify-content: space-between;
+}
+.tabs-nav li{
+    padding: 0 20px;
+    font-size: 10px;
+}
+/* .tabs-nav li:first-child{
+    padding-left: 0;
+}
+.tabs-nav li:last-child{
+    padding-right: 0;
+} */
+.tabs-icons{
+    display: flex;
+}
+.tabs-icons li{
+    padding: 0 20px;
+}
+.tabs-icons li:last-child{
+    padding-right: 0;
+}
+.slider img {
+    margin: 0 160px;
+}
+.slyder-dots{
+    display:flex;
+    justify-content: center;
+    margin-top: 17px;
+}
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #EFEEF6;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.banner{
+    position: relative;
+}
+.promo{
+    color: #1C2A39;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.banner-promo-1{
+    background-color: #9E98DC;
+    width: 149px;
+    height: 204px;
+    position: absolute;
+    left: 1217px;
+    top:82px;
+    
+}
+.banner-promo-1-text{
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 102px 20px 25px 20px;
+}
+.banner-promo-2{
+    background-color: #FF8FE6;
+    width: 137px;
+    height: 273px;
+    position: absolute;
+    left: 1303px;
+    top:359px;
+}
+.banner-promo-2-text{
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 149px 47px 25px 21px;
+}
+.categories{
+    display: flex;
+    margin-left: 0;
+    height: 710px;
+    width: 30%;
+    background-color: #EFEEF6;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 105px;
+}
+.categories ul{
+    margin-top: 46px;
+}
+.categories li{
+    margin-top: 23px;
+
+}
+.categories-select-active{
+    font-size: 16px;
+    color: #1C2A39;
+    font-weight: 700;
+}
