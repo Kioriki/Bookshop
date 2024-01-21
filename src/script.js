@@ -1,4 +1,4 @@
-import "./src/slider.js"
+
 
 document.addEventListener('DOMContentLoaded', function(){
     
