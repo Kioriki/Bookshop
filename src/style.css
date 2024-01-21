@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Montserrat&display=swap");
+html, body {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  color: #1C2A39; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0px auto;
+  color: #5C6A79; }
+  a:active {
+    text-decoration: none;
+    color: #1C2A39; }
+  a:hover {
+    text-decoration: none; }
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 1440px;
+  color: #5C6A79;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif; }
+  .container header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 47px 160px 40px 166px; }
+    .container header .breadcrumbs {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .container header .breadcrumbs .tabs-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        text-transform: uppercase;
+        color: #5C6A79;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .container header .breadcrumbs .tabs-nav li {
+          padding: 0 20px;
+          font-size: 10px; }
+          .container header .breadcrumbs .tabs-nav li a {
+            color: #5C6A79; }
+          .container header .breadcrumbs .tabs-nav li.tabs-nav-active a {
+            color: #1C2A39;
+            font-weight: 900; }
+      .container header .breadcrumbs .tabs-icons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        .container header .breadcrumbs .tabs-icons li {
+          padding: 0 20px;
+          cursor: pointer; }
+        .container header .breadcrumbs .tabs-icons li:last-child {
+          padding-right: 0px; }
+  .container main .banner {
+    position: relative; }
+    .container main .banner .promo {
+      color: #1C2A39;
+      text-transform: uppercase;
+      font-size: 18px; }
+      .container main .banner .promo.banner-promo-1 {
+        background-color: #9E98DC;
+        width: 149px;
+        height: 204px;
+        position: absolute;
+        left: 1217px;
+        top: 82px; }
+        .container main .banner .promo.banner-promo-1 .banner-promo-1-text {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          margin: 102px 20px 25px 20px; }
+      .container main .banner .promo.banner-promo-2 {
+        background-color: #FF8FE6;
+        width: 137px;
+        height: 273px;
+        position: absolute;
+        left: 1303px;
+        top: 359px; }
+        .container main .banner .promo.banner-promo-2 .banner-promo-2-text {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          margin: 149px 47px 25px 21px; }
+    .container main .banner .slider .slide_active {
+      opacity: 1; }
+      .container main .banner .slider .slide_active img {
+        margin: 0 160px; }
+    .container main .banner .slyder-dots {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 17px; }
+      .container main .banner .slyder-dots .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #EFEEF6;
+        margin: 0 10px;
+        cursor: pointer; }
+        .container main .banner .slyder-dots .dot.active {
+          background-color: #756AD3;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          margin: 0 10px;
+          cursor: pointer; }
+  .container main .categories {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0px;
+    height: 710px;
+    width: 30%;
+    background-color: #EFEEF6;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 105px; }
+    .container main .categories ul {
+      margin-top: 46px;
+      margin-left: 160px; }
+      .container main .categories ul li {
+        margin-top: 23px;
+        position: relative; }
+        .container main .categories ul li a {
+          color: #1C2A39; }
+        .container main .categories ul li.categories-select-active {
+          font-size: 16px;
+          color: #1C2A39;
+          font-weight: 700; }
+        .container main .categories ul li.categories-select-active::before {
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          top: 50%;
+          left: -14px;
+          -webkit-transform: translateY(-50%);
+                  transform: translateY(-50%);
+          border-radius: 50%;
+          background: #756AD3; }
+
+/*# sourceMappingURL=style.css.map */
