@@ -8,7 +8,8 @@
     "minifyImages": "imagemin src/images/* --out-dir=dist/images",
     "build": "webpack",
     "build:watch": "webpack --watch",
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "start:dev": "webpack-dev-server --port=8000"
   },
   "author": "",
   "license": "ISC",
