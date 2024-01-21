@@ -1,3 +1,5 @@
+export function startSlider() {
+
 const slider = document.querySelector('.slider');
 const slides = Array.from(slider.querySelectorAll('img'));
 
@@ -14,6 +16,11 @@ dotNavItem.forEach((navItem, navIndex) => {
     });
 
 })
+
+function navItemClick (){
+    updateSlider();
+    updateDotNav();
+}
 
 function showPreviousSlide() {
     slideIndex = (slideIndex - 1 + slideCount) % slideCount;
@@ -37,7 +44,7 @@ function updateSlider() {
     });
 }
 
-export function updateDotNav() {
+function updateDotNav() {
     dotNavItem.forEach((item, index) => {
         if (index === slideIndex) {
             item.classList.add('active');
@@ -52,3 +59,4 @@ updateDotNav();
 setInterval(function() {
     showNextSlide();
 }, 5000);
+}

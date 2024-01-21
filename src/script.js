@@ -1,5 +1,3 @@
-
-import "./slider.js"
 document.addEventListener('DOMContentLoaded', function(){
     
 
@@ -32,12 +30,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
    
 
-    function navItemClick (){
-        updateSlider();
-        updateDotNav();
-    }
-
-    
 
 
     

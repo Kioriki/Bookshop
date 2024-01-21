@@ -1,23 +1,60 @@
+// Импортируем модуль плагина в нашу конфигурацию.
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+
 
 module.exports = {
-    entry: path.resolve(__dirname, './index.js'),
-    output:{
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
-    },
-    mode: 'development', 
-    plugins: [new HtmlWebpackPlugin(),
-    new MiniCssExtractPlugin()],
-    module: {
-        rules: [
+  entry: './index.js',
+  output: {
+    filename: "main.js"
+  },
+  module: {
+    rules: [
+      {
+        // Для всех файлов HTML
+        test: /\.html$/,
+        use: [
           {
-            test:  /\.s[ac]ss$/i, 
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-          },
-        ],
+            // Воспользуемся загрузчиком html-loader
+            loader: "html-loader",
+            // Который заодно проминимизирует наш HTML
+            options: {
+              minimize: true,
+              sources: false
+            }
+          }
+        ]
       },
-
-}
+      {
+        test: /.s?css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+    ]
+  },
+  optimization: {
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
+  },
+  plugins: [
+    // Скопируем наш index.html в папку dist
+    new HtmlWebpackPlugin({
+      template: "./index.html",
+      filename: "./index.html"
+    }),
+    new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/images'),
+          to: path.resolve(__dirname, 'dist/images')
+        }
+      ],
+    }),
+  ]
+};

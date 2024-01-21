@@ -1,3 +1,4 @@
 import "./src/script.js"
 import "./src/style.scss"
-import "./src/slider.js"
+import {startSlider} from './src/slider.js';
+startSlider();
