@@ -15,24 +15,32 @@ module.exports = {
   module: {
     rules: [
       {
-        // Для всех файлов HTML
-        test: /\.html$/,
-        use: [
-          {
-            // Воспользуемся загрузчиком html-loader
-            loader: "html-loader",
-            // Который заодно проминимизирует наш HTML
-            options: {
-              minimize: true,
-              sources: false
-            }
-          }
-        ]
-      },
+				test: /\.pug$/,
+				loader: 'pug-loader',
+				options: {
+				pretty: true
+				}
+			},
+      // {
+      //   // Для всех файлов HTML
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       // Воспользуемся загрузчиком html-loader
+      //       loader: "html-loader",
+      //       // Который заодно проминимизирует наш HTML
+      //       options: {
+      //         minimize: true,
+      //         sources: false
+      //       }
+      //     }
+      //   ]
+      // },
       {
         test: /.s?css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      
     ]
   },
   optimization: {
@@ -44,7 +52,7 @@ module.exports = {
   plugins: [
     // Скопируем наш index.html в папку dist
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./src/index.pug",
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin(),

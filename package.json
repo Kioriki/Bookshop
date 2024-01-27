@@ -7,13 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "minifyImages": "imagemin src/images/* --out-dir=dist/images",
     "build": "webpack --mode production",
-    "build:watch": "webpack --watch",
     "start": "webpack serve",
-    "start:dev": "webpack-dev-server --port=8000"
+    "start:dev": "webpack-dev-server --port=8000",
+    "lint": "eslint ./src/**/*.ts{,x}",
+    "watch": "webpack --mode production --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "husky": "^8.0.3",
     "imagemin-cli": "^7.0.0"
   },
   "devDependencies": {
@@ -23,6 +30,8 @@
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.7.7",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
     "sass": "^1.70.0",
     "sass-loader": "^14.0.0",
     "style-loader": "^3.3.4",
