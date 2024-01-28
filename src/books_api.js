@@ -116,13 +116,13 @@ function getBasketLocalStorage() {
 function setBasketLocalStorage(basket) {
     const basketCount = document.querySelector('.basket__count');
     localStorage.setItem('basket', JSON.stringify(basket));
-    basketCount.textContent = basket.length;
+    if(basket.length==0){
+        basketCount.style.display = "none";
+    }else{
+        basketCount.style.display = "block";
+        basketCount.textContent = basket.length;
+    }
 };
-
-
-
-
-
 
 //Установка шага для кнопки load more
 function loadCards () {
@@ -133,26 +133,32 @@ function loadCards () {
 };
 
 function handleCardClick (event) {
-    const targetButton = event.target.closest('.books__button-btn');
+
+    const targetButton = event.target;
     if (!targetButton) return;
 
-    const card = targetButton.closest('.books__cards');
-    const id = card.dataset.productId;
+    const card = targetButton.closest('.books__card');
+    const id = card.dataset.productid;
     const basket = getBasketLocalStorage();
 
     basket.push(id);
 
     setBasketLocalStorage(basket);
-    checkInActiveButtons(basket,card);
+    checkInActiveButtons(basket);
 };
 
 //изменение кнопки покупки книги
-function checkInActiveButtons (basket,card) {
+function checkInActiveButtons (basket) {
     const buttons = document.querySelectorAll('.books__button-btn');
+
+    console.log('23');
+    console.log(basket);
+    console.log(buttons);
     
     buttons.forEach(btn => {
 
-        const id = card.dataset.id;
+        const card = btn.closest('.books__card');
+        const id = card.dataset.productid;
         const isInbasket = basket.includes(id);
 
         btn.disabled = isInbasket;
@@ -192,7 +198,7 @@ function createCards(result, clear) {
         }
         
         const cardBook = `
-        <div class="books__card" data-product-id="${item.id}">
+        <div class="books__card" data-productid="${item.id}">
             <div class="books__card-image">
                 <img class="books__card-img" src="${item.volumeInfo.imageLinks.thumbnail ?? '../img/placeholder.jpg'}">
             </div>
@@ -234,6 +240,8 @@ function createCards(result, clear) {
         booksCard.innerHTML = booksCard.innerHTML + cards;
     }
     
+    checkInActiveButtons(getBasketLocalStorage());
+    setBasketLocalStorage(getBasketLocalStorage());
     
 };
 

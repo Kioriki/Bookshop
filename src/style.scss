@@ -91,6 +91,7 @@ p{
                 .basket{
                     position: relative;
                     .basket__count{
+                        display:none;
                         background-color: #FF353A;
                         border: solid 1px #FF353A;
                         color: #FFF;
@@ -338,6 +339,7 @@ p{
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 74px;
             
 
                 .books__button-more{
